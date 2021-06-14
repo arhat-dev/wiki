@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:31:33.281Z
+date: 2021-06-14T11:32:56.810Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -63,39 +63,13 @@ extraEnvVars:
     -Dkeycloak.adminUrl=<custom url>
 ```
 
-Then, forbid user from accessing `/auth/admin`
+Then, forbid public user from accessing `/auth/admin`:
 
 ```yaml
 ingress:
-  ## Set to true to enable ingress record generation
-  ##
-  enabled: true
-
-  ## Set this to true in order to add the corresponding annotations for cert-manager
-  ##
-  certManager: true
-
-  ## When the ingress is enabled, a host pointing to this will be created
-  ##
-  hostname: auth.arhat.dev
-
-  ## Override API Version (automatically detected if not set)
-  ##
-  apiVersion:
-
-  ## Ingress Path
-  ##
-  path: /
-
-  ## Ingress Path type
-  ##
-  pathType: Prefix
-
-  ## Ingress annotations done as key:value pairs
-  ## For a full list of possible ingress annotations, please see
-  ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
-  ##
-  ## If certManager is set to true, annotation kubernetes.io/tls-acme: "true" will automatically be set
-  ##
   annotations:
+    nginx.ingress.kubernetes.io/server-snippet: |-
+      location ~* /auth/admin/[^/]+
+          return 403;
+      }
 ```
