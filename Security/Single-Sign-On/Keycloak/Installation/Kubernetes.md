@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:59:30.927Z
+date: 2021-06-14T12:00:31.586Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -77,7 +77,7 @@ To protect the installed `keycloak` instance, there are extra work to do.
 
 Ref: 
 
-### Disable Public Acceess to Metrics
+### Disable Public Access to Metrics
 
 If you enabled metrics, they will be exposed at `/auth/realms/<realm-name>/metrics` without any protection, you may want to deny requests to these metrics endpoints from public domain.
 
