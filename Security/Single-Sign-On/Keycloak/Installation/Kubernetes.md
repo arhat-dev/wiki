@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:48:08.549Z
+date: 2021-06-14T11:51:40.064Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -22,7 +22,18 @@ Install `keycloak` using helm chart
 
 ### Enable `keycloak` Metrics
 
-Ref: https://github.com/bitnami/bitnami-docker-keycloak#enabling-statistics
+Ref:
+
+- https://github.com/bitnami/bitnami-docker-keycloak#enabling-statistics
+- https://github.com/codecentric/helm-charts/blob/master/charts/keycloak/README.md#prometheus-metrics-support
+
+```
+extraEnvVars:
+- name: KEYCLOAK_ENABLE_STATISTICS
+  value: "true"
+- name: KEYCLOAK_STATISTICS
+  value: all
+```
 
 ## Customization
 
