@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T12:00:31.586Z
+date: 2021-06-14T12:11:10.857Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -110,7 +110,7 @@ Then, forbid public users from accessing `/auth/admin`:
 ingress:
   annotations:
     nginx.ingress.kubernetes.io/server-snippet: |-
-      location ^~ /auth/admin
+      location ^~ /auth/admin/ {
           return 403;
       }
 ```
