@@ -1,8 +1,8 @@
 ---
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
-published: false
-date: 2021-06-14T11:00:19.518Z
+published: true
+date: 2021-06-14T11:01:39.756Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -26,7 +26,7 @@ extraEnvVars:
     -Dkeycloak.profile.feature.<feature name>=<enabled | disabled>
 ```
 
-Useful features:
+Useful features not enabled by default:
 - `script` - The script authenticator, which allows you defining your custom login flow using JavaScript,
   - see https://www.keycloak.org/docs/latest/server_development/#_script_providers
 - `docker`
