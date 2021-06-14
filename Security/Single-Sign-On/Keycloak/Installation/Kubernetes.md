@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:40:11.208Z
+date: 2021-06-14T11:44:17.969Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -12,11 +12,19 @@ dateCreated: 2021-06-14T09:22:01.051Z
 
 Install `keycloak` using helm
 
+## Monitoring
+
+### Enable `keycloak` Metrics
+
+Ref: https://github.com/bitnami/bitnami-docker-keycloak#enabling-statistics
+
 ## Customization
 
 ### Custom Login URL
 
-By default, you keycloak will serve login page at `/auth`, while you may want to separate public user from applications, this can be done with `frontendUrl` proterty:
+Ref: https://www.keycloak.org/docs/latest/server_installation/index.html#default-provider
+
+By default, you keycloak will serve login page at `/auth`, while you may want to separate public user from applications, this can be done with `frontendUrl` proterty
 
 ```yaml
 extraEnvVars:
