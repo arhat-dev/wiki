@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: false
-date: 2021-06-14T10:59:41.826Z
+date: 2021-06-14T11:00:19.518Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -21,7 +21,7 @@ To enable/disable a feature in helm values, we can use the environment variable 
 ```yaml
 extraEnvVars:
 - name: JAVA_OPTS
-  # other values are omited
+  # other values are omitted
   value: |-
     -Dkeycloak.profile.feature.<feature name>=<enabled | disabled>
 ```
