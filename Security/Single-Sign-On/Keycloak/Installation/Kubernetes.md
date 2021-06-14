@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:53:27.950Z
+date: 2021-06-14T11:54:49.307Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -48,7 +48,7 @@ extraEnvVars:
 - name: JAVA_OPTS
   # other values are omitted
   value: |-
-		-Dkeycloak.frontendUrl=<custom url>
+    -Dkeycloak.frontendUrl=<custom url>
 ```
 
 ### Enable/Disable Features
