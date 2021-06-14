@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:33:05.610Z
+date: 2021-06-14T11:40:11.208Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -12,7 +12,21 @@ dateCreated: 2021-06-14T09:22:01.051Z
 
 Install `keycloak` using helm
 
-## Enable/Disable Features
+## Customization
+
+### Custom Login URL
+
+By default, you keycloak will serve login page at `/auth`, while you may want to separate public user from applications, this can be done with `frontendUrl` proterty:
+
+```yaml
+extraEnvVars:
+- name: JAVA_OPTS
+  # other values are omitted
+  value: |-
+		-Dkeycloak.frontendUrl=<custom url>
+```
+
+### Enable/Disable Features
 
 Ref: https://www.keycloak.org/docs/latest/server_installation/index.html#profiles
 
@@ -53,7 +67,7 @@ ingress:
 
 ### Hide Admin Console from Public Domain
 
-Firstly, you have to set a fixed adminUrl
+Firstly, you have to set a fixed adminUrl as noted in [Hostname #default-provider](https://www.keycloak.org/docs/latest/server_installation/index.html#default-provider)
 
 ```yaml
 extraEnvVars:
