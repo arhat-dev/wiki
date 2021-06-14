@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:44:17.969Z
+date: 2021-06-14T11:48:08.549Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -10,7 +10,13 @@ dateCreated: 2021-06-14T09:22:01.051Z
 
 # Installation on Kubernetes
 
-Install `keycloak` using helm
+Install `keycloak` using helm chart
+
+## Environment
+
+- `kubernetes` cluster v1.20.7
+- helm v3
+- [`keycloak` chart from bitnami](https://artifacthub.io/packages/helm/bitnami/keycloak)
 
 ## Monitoring
 
@@ -57,6 +63,8 @@ Useful features not enabled by default:
 ## Hardening
 
 To protect the installed `keycloak` instance, there are extra work to do.
+
+Ref: 
 
 ### Disable Public Acceess to Metrics
 
