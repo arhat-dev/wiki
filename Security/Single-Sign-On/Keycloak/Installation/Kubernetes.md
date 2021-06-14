@@ -2,7 +2,7 @@
 title: Keycloak Installation on Kubernetes
 description: Keycloak Installation on Kubernetes using helm
 published: true
-date: 2021-06-14T11:32:56.810Z
+date: 2021-06-14T11:33:05.610Z
 tags: security, keycloak, kubernetes, helm
 editor: markdown
 dateCreated: 2021-06-14T09:22:01.051Z
@@ -63,7 +63,7 @@ extraEnvVars:
     -Dkeycloak.adminUrl=<custom url>
 ```
 
-Then, forbid public user from accessing `/auth/admin`:
+Then, forbid public users from accessing `/auth/admin`:
 
 ```yaml
 ingress:
