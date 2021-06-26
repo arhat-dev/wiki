@@ -2,7 +2,7 @@
 title: Well-known Labels
 description: 
 published: true
-date: 2021-06-26T00:59:23.474Z
+date: 2021-06-26T01:42:39.967Z
 tags: container, oci, docker
 editor: markdown
 dateCreated: 2021-06-26T00:16:36.821Z
