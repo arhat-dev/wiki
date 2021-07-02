@@ -2,7 +2,7 @@
 title: Commit Message
 description: 
 published: true
-date: 2021-07-02T18:40:15.369Z
+date: 2021-07-02T19:35:08.928Z
 tags: git, commit, convension
 editor: markdown
 dateCreated: 2021-07-02T18:31:52.038Z
@@ -43,3 +43,7 @@ Repo maintenance related
 - `chore`: all kinds of small tasks
 - `nit`: short for nit pick, a small change that may not be very important, but is technically correct
 	- source: https://en.wikipedia.org/wiki/Nitpicking
+
+## Tools
+
+- https://github.com/talos-systems/conform
