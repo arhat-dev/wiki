@@ -2,7 +2,7 @@
 title: Commit Message
 description: 
 published: true
-date: 2021-07-07T15:48:07.413Z
+date: 2021-07-07T15:51:03.316Z
 tags: git, commit, convension
 editor: markdown
 dateCreated: 2021-07-02T18:31:52.038Z
@@ -37,12 +37,12 @@ Final production related
 
 Repo maintenance related
 
-- `docs`: documentation only changes
+- `docs`: documentation only changes, should not touch any code
 - `refactor`: refactoring of the codebase
-- `style`: formatting change (e.g. trim trailing whitespaces, change spaces to tabs)
-- [`chore`](https://www.merriam-webster.com/dictionary/chore): all kinds of small tasks
-- `nit`: short for nit pick, a small change that may not be very important, but is technically correct
-	- source: https://en.wikipedia.org/wiki/Nitpicking
+- `style`: formatting change
+  - e.g. trim trailing whitespaces, change spaces to tabs
+- [`chore`](https://www.merriam-webster.com/dictionary/chore): all kinds of small/trivial tasks and daily routine
+- `nit` [(short for nit pick)](https://en.wikipedia.org/wiki/Nitpicking): a small change that may not be very important, but is technically correct
 
 ## Tools
 
