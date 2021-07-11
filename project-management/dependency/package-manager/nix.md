@@ -2,7 +2,7 @@
 title: Nix
 description: Nix Package Manager
 published: true
-date: 2021-07-11T13:20:31.898Z
+date: 2021-07-11T13:23:21.124Z
 tags: package-manager, nix
 editor: markdown
 dateCreated: 2021-07-11T13:13:48.715Z
@@ -16,13 +16,18 @@ Nix Package Manager
 
 ### Manage Channels (package lists)
 
+Ref: https://nixos.org/manual/nix/stable/#sec-nix-channel
+
+File Storage:
+- System Channels (requires root privilege): /etc/nixos/configuration.nix
+
 List subscribed channels
 
 ```bash
 nix-channel --list
 ```
 
-Subscribe a channel (add a list)
+Subscribe a channel (add a package list)
 
 ```bash
 nix-channel --add <http-url> {optional-name}
