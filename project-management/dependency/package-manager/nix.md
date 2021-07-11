@@ -2,7 +2,7 @@
 title: Nix
 description: Nix Package Manager
 published: true
-date: 2021-07-11T13:46:17.010Z
+date: 2021-07-11T13:47:49.282Z
 tags: package-manager, nix
 editor: markdown
 dateCreated: 2021-07-11T13:13:48.715Z
@@ -13,6 +13,7 @@ dateCreated: 2021-07-11T13:13:48.715Z
 Nix Package Manager
 
 Resources:
+- https://nixos.org/manual/nix/stable/
 - https://nixos.wiki/wiki/Nix_to_Debian_phrasebook
 - https://nixos.wiki/wiki/Cheatsheet
 
