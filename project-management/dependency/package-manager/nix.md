@@ -2,7 +2,7 @@
 title: Nix
 description: Nix Package Manager
 published: true
-date: 2021-07-11T13:18:02.391Z
+date: 2021-07-11T13:19:54.082Z
 tags: package-manager, nix
 editor: markdown
 dateCreated: 2021-07-11T13:13:48.715Z
@@ -16,8 +16,22 @@ Nix Package Manager
 
 ### Manage Channels (package lists)
 
+List existing channels
+
+```bash
+nix-channel --list
+```
+
+Add a channel
+
 ```bash
 nix-channel --add <http-url> {optional-name}
+```
+
+Update channels
+
+```bash
+nix-channel --update {optional-space-separated-names}
 ```
 
 Wellknown Channels:
