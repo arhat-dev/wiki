@@ -2,7 +2,7 @@
 title: Nix
 description: Nix Package Manager
 published: true
-date: 2021-07-11T13:24:44.077Z
+date: 2021-07-11T13:28:57.431Z
 tags: package-manager, nix
 editor: markdown
 dateCreated: 2021-07-11T13:13:48.715Z
@@ -19,7 +19,7 @@ Nix Package Manager
 Ref:
 - https://nixos.org/manual/nix/stable/#sec-nix-channel
 - https://nixos.wiki/wiki/Nix_channels
-
+- https://status.nixos.org/
 
 File Storage:
 - System Channels (requires root privilege): `/etc/nixos/configuration.nix`
@@ -43,10 +43,17 @@ nix-channel --update {optional-space-separated-names}
 ```
 
 Wellknown Channels:
-- nixpkgs: https://nixos.org/channels/nixpkgs-unstable
-- 
+- nixpkgs-unstable: `https://nixos.org/channels/nixpkgs-unstable`
 
-### Install System Packages
+### Install Packages
+
+Search a package
+
+```bash
+nix search
+
+# nix-env -qa
+```
 
 ```bash
 nix-env -iA
