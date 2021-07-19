@@ -2,7 +2,7 @@
 title: Upgrade Postgres
 description: 
 published: true
-date: 2021-07-19T10:03:44.811Z
+date: 2021-07-19T10:14:54.503Z
 tags: maintenance, database
 editor: markdown
 dateCreated: 2021-07-19T09:44:54.526Z
@@ -17,6 +17,19 @@ __NOTE:__ This wiki is mainly for [`patroni`](https://github.com/zalando/patroni
 Ref:
 
 - https://github.com/zalando/postgres-operator/blob/master/docs/administrator.md#in-place-major-version-upgrade
+- https://github.com/zalando/postgres-operator/blob/master/docs/reference/operator_parameters.md#major-version-upgrades
+
+### Fully Automated
+
+Configure your postgres-operator (Update related ConfigMap or Custom Resource)
+
+1. Control what postgres versions to be upgraded: set `minimal_major_version: 10` as upgrade threshhold
+
+2. Set target version of postgres to be upgraded to: set `target_major_version: 13`
+
+3. Set `major_version_upgrade_mode: full` to enable fully automated upgrade
+
+### Automated by manual triggering
 
 ## Upgrade Manually with `pg_upgrade`
 
@@ -28,6 +41,8 @@ Ref:
 
 Ref:
 
+- https://github.com/zalando/spilo/pull/488
+	- this explains how spilo do the in-place upgrade
 - https://wiki.postgresql.org/wiki/In-place_upgrade
 - https://stackoverflow.com/questions/35682315/postgresql-inplace-database-upgrade
 
