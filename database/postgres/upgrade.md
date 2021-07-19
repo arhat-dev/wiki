@@ -2,7 +2,7 @@
 title: Upgrade Postgres
 description: 
 published: true
-date: 2021-07-19T10:16:12.349Z
+date: 2021-07-19T10:17:50.023Z
 tags: maintenance, database
 editor: markdown
 dateCreated: 2021-07-19T09:44:54.526Z
@@ -31,7 +31,9 @@ Configure your postgres-operator (Update related ConfigMap or Custom Resource)
 
 ### Automated after triggered manually
 
-Follow the first two steps in [Fully Automated](#fully-automated) section, and set `major_version_upgrade_mode: manual` to enable fully automated upgrade
+Follow the first two steps in [Fully Automated](#fully-automated) section, and set `major_version_upgrade_mode: manual`.
+
+Then when you update manifests or rotated a postgres pod meets requirements, postgres-operator will upgrade it.
 
 ## Upgrade Manually with `pg_upgrade`
 
@@ -49,11 +51,5 @@ Ref:
 - https://stackoverflow.com/questions/35682315/postgresql-inplace-database-upgrade
 
 ```bash
-/usr/lib/postgresql/${TARGET_PGVERSION}/bin/pg_upgrade --check --link \
-  --old-datadir=/home/postgres/pgdata/pgroot/data \
-  --new-datadir=/home/postgres/pgdata/pgroot/data \
-  --old-bindir=/usr/lib/postgresql/${OLD_PGVERSION}/bin \
-  --new-bindir=/usr/lib/postgresql/${TARGET_PGVERSION}/bin \
-  --old-options '-c config_file=/home/postgres/pgdata/pgroot/data/postgresql.conf' \
-  --new-options '-c config_file=/home/postgres/pgdata/pgroot/data/postgresql.conf'
+# TODO
 ```
