@@ -2,7 +2,7 @@
 title: Upgrade Postgres
 description: 
 published: true
-date: 2021-07-19T10:14:54.503Z
+date: 2021-07-19T10:16:12.349Z
 tags: maintenance, database
 editor: markdown
 dateCreated: 2021-07-19T09:44:54.526Z
@@ -29,7 +29,9 @@ Configure your postgres-operator (Update related ConfigMap or Custom Resource)
 
 3. Set `major_version_upgrade_mode: full` to enable fully automated upgrade
 
-### Automated by manual triggering
+### Automated after triggered manually
+
+Follow the first two steps in [Fully Automated](#fully-automated) section, and set `major_version_upgrade_mode: manual` to enable fully automated upgrade
 
 ## Upgrade Manually with `pg_upgrade`
 
