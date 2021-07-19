@@ -2,7 +2,7 @@
 title: Upgrade Postgres
 description: 
 published: true
-date: 2021-07-19T10:17:50.023Z
+date: 2021-07-19T10:20:04.103Z
 tags: maintenance, database
 editor: markdown
 dateCreated: 2021-07-19T09:44:54.526Z
@@ -13,6 +13,8 @@ dateCreated: 2021-07-19T09:44:54.526Z
 __NOTE:__ This wiki is mainly for [`patroni`](https://github.com/zalando/patroni) managed postgres clusters, inside [`spilo`](https://github.com/zalando/spilo) container, and spilo containers are managed by [`postgres-operator`](https://github.com/zalando/postgres-operator)
 
 ## Upgrade using `postgres-operator`
+
+__NOTE:__ The actual upgrade action is performed by `spilo`
 
 Ref:
 
