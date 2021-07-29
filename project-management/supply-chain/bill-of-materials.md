@@ -2,7 +2,7 @@
 title: Bill of Materials
 description: 
 published: true
-date: 2021-07-29T10:57:05.476Z
+date: 2021-07-29T10:59:03.564Z
 tags: management
 editor: markdown
 dateCreated: 2021-07-29T10:57:05.476Z
@@ -23,6 +23,7 @@ refs:
 
 - Standards
 	- https://github.com/spdx/spdx-spec
+  - https://github.com/CycloneDX/specification
 
 - Container Image
 	- https://github.com/anchore/syft
