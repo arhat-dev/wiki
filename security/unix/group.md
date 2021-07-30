@@ -2,7 +2,7 @@
 title: Unix Group
 description: 
 published: true
-date: 2021-07-30T18:21:48.652Z
+date: 2021-07-30T18:22:17.356Z
 tags: security, unix
 editor: markdown
 dateCreated: 2021-07-30T18:21:48.652Z
@@ -10,7 +10,7 @@ dateCreated: 2021-07-30T18:21:48.652Z
 
 # Unix Group
 
-## Lookup GroupIDs
+## Lookup User GroupIDs
 
 syscall [`getgrouplist`](https://man7.org/linux/man-pages/man3/getgrouplist.3.html)
 
