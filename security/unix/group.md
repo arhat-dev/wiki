@@ -2,7 +2,7 @@
 title: Unix Group
 description: 
 published: true
-date: 2021-07-30T18:22:17.356Z
+date: 2021-08-01T10:23:34.639Z
 tags: security, unix
 editor: markdown
 dateCreated: 2021-07-30T18:21:48.652Z
@@ -12,7 +12,10 @@ dateCreated: 2021-07-30T18:21:48.652Z
 
 ## Lookup User GroupIDs
 
-syscall [`getgrouplist`](https://man7.org/linux/man-pages/man3/getgrouplist.3.html)
+syscall `getgrouplist`
+- linux: https://man7.org/linux/man-pages/man3/getgrouplist.3.html
+- freebsd: https://www.freebsd.org/cgi/man.cgi?query=getgrouplist&sektion=3&apropos=0&manpath=freebsd
+- openbsd: https://man.openbsd.org/getgrouplist
 
 Refs:
 
