@@ -2,7 +2,7 @@
 title: Software Transactional Memory
 description: 
 published: true
-date: 2021-08-11T12:58:31.391Z
+date: 2021-08-11T13:00:25.148Z
 tags: stm, concurrency
 editor: markdown
 dateCreated: 2021-08-11T12:46:32.761Z
@@ -13,6 +13,7 @@ dateCreated: 2021-08-11T12:46:32.761Z
 Refs:
 - [2005-ppopp-composable.pdf](/assets/2005-ppopp-composable.pdf) [[source](https://www.microsoft.com/en-us/research/wp-content/uploads/2005/01/2005-ppopp-composable.pdf)]
 - [https://wasp.cs.washington.edu/wasp_scat.html](https://wasp.cs.washington.edu/wasp_scat.html)
+- [http://apt.cs.manchester.ac.uk/projects/TERAFLUX/MUTS/](http://apt.cs.manchester.ac.uk/projects/TERAFLUX/MUTS/)
 
 ## Implementation
 
