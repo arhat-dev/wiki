@@ -2,7 +2,7 @@
 title: Cross Compiling Using Clang Toolchain
 description: 
 published: true
-date: 2021-08-17T21:47:45.778Z
+date: 2021-08-17T21:49:02.062Z
 tags: language, c, cross-compile, corss
 editor: markdown
 dateCreated: 2021-08-17T21:44:10.751Z
@@ -15,3 +15,7 @@ Refs:
 
 ## In Container
 
+For a different OS
+
+- `ghcr.io/arhat-dev/freebsd`
+- `ghcr.io/arhat-dev/openbsd`
