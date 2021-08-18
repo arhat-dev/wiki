@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-08-18T08:56:24.351Z
+date: 2021-08-18T08:56:34.207Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -37,7 +37,7 @@ make -j8
 # Install qemu
 sudo make install
 
-# clean up
+# Clean up
 cd ../../ && sudo rm -rf qemu
 ```
 
