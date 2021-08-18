@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-08-18T08:57:12.763Z
+date: 2021-08-18T09:57:10.254Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -11,6 +11,8 @@ dateCreated: 2021-06-28T10:38:40.413Z
 # Docker Setup
 
 ## Use [`lima`](https://github.com/lima-vm/lima)
+
+### Compile qemu for mac m1 with `hvf` support
 
 Refs:
 - [https://gist.github.com/nrjdalal/e70249bb5d2e9d844cc203fd11f74c55](https://gist.github.com/nrjdalal/e70249bb5d2e9d844cc203fd11f74c55)
