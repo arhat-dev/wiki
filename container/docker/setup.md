@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-08-18T08:56:34.207Z
+date: 2021-08-18T08:57:12.763Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-28T10:38:40.413Z
 
 # Docker Setup
 
-## Use `lima`
+## Use [`lima`](https://github.com/lima-vm/lima)
 
 Refs:
 - [https://gist.github.com/nrjdalal/e70249bb5d2e9d844cc203fd11f74c55](https://gist.github.com/nrjdalal/e70249bb5d2e9d844cc203fd11f74c55)
