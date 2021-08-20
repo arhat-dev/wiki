@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-08-18T09:57:10.254Z
+date: 2021-08-20T23:09:48.118Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -49,6 +49,7 @@ Ref:
 - [https://github.com/docker/setup-qemu-action](https://github.com/docker/setup-qemu-action)
 - [https://github.com/tonistiigi/binfmt](https://github.com/tonistiigi/binfmt)
 - [https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md](https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md)
+- [https://github.com/dbhi/qus](https://github.com/dbhi/qus)
 
 ## Useful command snippets
 
