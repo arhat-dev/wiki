@@ -2,7 +2,7 @@
 title: Cross Compiling with zig cc
 description: 
 published: true
-date: 2021-08-21T00:09:31.721Z
+date: 2021-08-21T00:11:15.191Z
 tags: cross-compile, llvm, zig
 editor: markdown
 dateCreated: 2021-08-21T00:09:31.721Z
@@ -18,5 +18,5 @@ Ref:
 ### Find Targets
 
 ```bash
-$ zig targets
+$ zig targets | gojq -r '.libc[]'
 ```
