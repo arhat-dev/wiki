@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-08-20T23:09:48.118Z
+date: 2021-08-31T07:33:12.575Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -50,6 +50,11 @@ Ref:
 - [https://github.com/tonistiigi/binfmt](https://github.com/tonistiigi/binfmt)
 - [https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md](https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md)
 - [https://github.com/dbhi/qus](https://github.com/dbhi/qus)
+
+```bash
+# go to docker
+sudo -i 
+```
 
 ## Useful command snippets
 
