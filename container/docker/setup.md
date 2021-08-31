@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-08-31T07:33:12.575Z
+date: 2021-08-31T07:36:25.890Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -52,8 +52,11 @@ Ref:
 - [https://github.com/dbhi/qus](https://github.com/dbhi/qus)
 
 ```bash
-# go to docker
-sudo -i 
+# go to docker host
+$ sudo ln -s /usr /qus
+# register qemu-static as binfmt to /qus (currently no other location supported)
+$ sudo nerdctl run --rm --privileged -it aptman/qus -s -- -p
+# copy qemu-static binaries from aptman/qus image or install via system package manger, or download from releases of https://github.com/multiarch/qemu-user-static
 ```
 
 ## Useful command snippets
