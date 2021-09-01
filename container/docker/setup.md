@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-08-31T07:36:25.890Z
+date: 2021-09-01T09:39:11.017Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -56,8 +56,13 @@ Ref:
 $ sudo ln -s /usr /qus
 # register qemu-static as binfmt to /qus (currently no other location supported)
 $ sudo nerdctl run --rm --privileged -it aptman/qus -s -- -p
-# copy qemu-static binaries from aptman/qus image or install via system package manger, or download from releases of https://github.com/multiarch/qemu-user-static
+# copy qemu-static binaries from aptman/qus image or install via system package manger, or download from releases of https://github.com/multiarch/qemu-user-static (currently only have x86_64 support)
+$ sudo nerdctl run --rm -v aptman/qus -s -- -p
 ```
+
+For arm64 host users, you may need to enable arm translation explicitly due to `qemu-binfmt-conf.sh` assuming your cpu supports aarch32 and will not register `/proc/sys/fs/binfmt_misc/qemu-arm` for arm binaries. To do this, run the script with environment variable `HOST_ARCH=x86_64` and set `TARGET_ARCH` to `arm`
+
+$ sudo nerdctl run --rm --privileged -e HOST_ARCH=x86_64 aptman/qus -s -- -p arm
 
 ## Useful command snippets
 
