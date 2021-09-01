@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-09-01T09:53:44.288Z
+date: 2021-09-01T15:15:10.934Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -79,7 +79,7 @@ $ cp /usr/bin/qemu-*-static /qus/bin/.
 
 - Option 3: Download them from release assets of https://github.com/multiarch/qemu-user-static (x86_64 host only) or https://github.com/dbhi/qus (`qemu-xxx-static_${HOST}.tgz` for HOST arch)
 
-3. (For arm64 host users) You may need to enable arm translation explicitly due to `qemu-binfmt-conf.sh` assuming your cpu supports aarch32 and will not register `/proc/sys/fs/binfmt_misc/qemu-arm` for arm binaries. To do this, run the script with environment variable `HOST_ARCH=x86_64` and set `TARGET_ARCH` to `arm`
+3. (For arm64 host users) You may need to enable `arm` emulation explicitly due to `qemu-binfmt-conf.sh` assuming your cpu supports aarch32 and will not register `/proc/sys/fs/binfmt_misc/qemu-arm` for arm binaries. To do this, run the script with environment variable `HOST_ARCH=x86_64` and set `TARGET_ARCH` to `arm`
 
 ```bash
 $ sudo nerdctl run --rm --privileged -e HOST_ARCH=x86_64 aptman/qus -s -- -p arm
