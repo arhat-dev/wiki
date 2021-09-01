@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-09-01T09:39:26.344Z
+date: 2021-09-01T09:53:44.288Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -51,16 +51,35 @@ Ref:
 - [https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md](https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md)
 - [https://github.com/dbhi/qus](https://github.com/dbhi/qus)
 
+1. Register qemu-user binaries in `/qus/bin`
+
 ```bash
-# go to docker host
-$ sudo ln -s /usr /qus
-# register qemu-static as binfmt to /qus (currently no other location supported)
-$ sudo nerdctl run --rm --privileged -it aptman/qus -s -- -p
-# copy qemu-static binaries from aptman/qus image or install via system package manger, or download from releases of https://github.com/multiarch/qemu-user-static (currently only have x86_64 support)
-$ sudo nerdctl run --rm -v aptman/qus -s -- -p
+$ sudo nerdctl run --rm --privileged -e QEMU_BIN_DIR=/qus -it aptman/qus -s -- -p
 ```
 
-For arm64 host users, you may need to enable arm translation explicitly due to `qemu-binfmt-conf.sh` assuming your cpu supports aarch32 and will not register `/proc/sys/fs/binfmt_misc/qemu-arm` for arm binaries. To do this, run the script with environment variable `HOST_ARCH=x86_64` and set `TARGET_ARCH` to `arm`
+2. Copy qemu-user binaries
+
+- Option 1: From aptman/qus image (recommended)
+
+```bash
+$ sudo nerdctl run --rm -it -v /qus:/host-qus aptman/qus -i sh
+# in container
+$ mv /qus/bin /host-qus/bin
+```
+
+- Option 2: Find them installed by system package manger
+
+```bash
+# for debian based distro
+$ apt-get update && apt-get install -y qemu-user-static
+
+$ mkdir -p /qus/bin
+$ cp /usr/bin/qemu-*-static /qus/bin/.
+```
+
+- Option 3: Download them from release assets of https://github.com/multiarch/qemu-user-static (x86_64 host only) or https://github.com/dbhi/qus (`qemu-xxx-static_${HOST}.tgz` for HOST arch)
+
+3. (For arm64 host users) You may need to enable arm translation explicitly due to `qemu-binfmt-conf.sh` assuming your cpu supports aarch32 and will not register `/proc/sys/fs/binfmt_misc/qemu-arm` for arm binaries. To do this, run the script with environment variable `HOST_ARCH=x86_64` and set `TARGET_ARCH` to `arm`
 
 ```bash
 $ sudo nerdctl run --rm --privileged -e HOST_ARCH=x86_64 aptman/qus -s -- -p arm
