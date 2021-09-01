@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-09-01T09:39:11.017Z
+date: 2021-09-01T09:39:26.344Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -62,7 +62,9 @@ $ sudo nerdctl run --rm -v aptman/qus -s -- -p
 
 For arm64 host users, you may need to enable arm translation explicitly due to `qemu-binfmt-conf.sh` assuming your cpu supports aarch32 and will not register `/proc/sys/fs/binfmt_misc/qemu-arm` for arm binaries. To do this, run the script with environment variable `HOST_ARCH=x86_64` and set `TARGET_ARCH` to `arm`
 
+```bash
 $ sudo nerdctl run --rm --privileged -e HOST_ARCH=x86_64 aptman/qus -s -- -p arm
+```
 
 ## Useful command snippets
 
