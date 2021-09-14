@@ -2,7 +2,7 @@
 title: Docker Setup
 description: Operations after docker installation
 published: true
-date: 2021-09-01T15:15:10.934Z
+date: 2021-09-14T06:28:22.954Z
 tags: docker
 editor: markdown
 dateCreated: 2021-06-28T10:38:40.413Z
@@ -12,7 +12,13 @@ dateCreated: 2021-06-28T10:38:40.413Z
 
 ## Use [`lima`](https://github.com/lima-vm/lima)
 
-### Compile qemu for mac m1 with `hvf` support
+### Step 0: Install lima Executables
+
+Ref: [https://github.com/lima-vm/lima/releases](https://github.com/lima-vm/lima/releases)
+
+### Step 1: Install qemu-system Executables
+
+#### For m1 Mac: Compile qemu for mac m1 with `hvf` support
 
 Refs:
 - [https://gist.github.com/nrjdalal/e70249bb5d2e9d844cc203fd11f74c55](https://gist.github.com/nrjdalal/e70249bb5d2e9d844cc203fd11f74c55)
@@ -43,7 +49,12 @@ sudo make install
 cd ../../ && sudo rm -rf qemu
 ```
 
-## Setup usable multi-arch support
+### Step 1: Provision your lima VM
+
+- With docker: [https://github.com/lima-vm/lima/blob/master/examples/docker.yaml](https://github.com/lima-vm/lima/blob/master/examples/docker.yaml)
+- With podman: [https://github.com/lima-vm/lima/blob/master/examples/podman.yaml](https://github.com/lima-vm/lima/blob/master/examples/podman.yaml)
+
+### Setup usable multi-arch support
 
 Ref:
 - [https://github.com/docker/setup-qemu-action](https://github.com/docker/setup-qemu-action)
