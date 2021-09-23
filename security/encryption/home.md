@@ -2,7 +2,7 @@
 title: Encryption
 description: 
 published: true
-date: 2021-09-23T10:17:13.830Z
+date: 2021-09-23T10:37:42.201Z
 tags: security, crypto, encryption
 editor: markdown
 dateCreated: 2021-09-23T10:17:13.830Z
@@ -16,6 +16,7 @@ Refs:
 
 - [https://en.wikipedia.org/wiki/Homomorphic_encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)
 - [https://people.csail.mit.edu/vinodv/FHE/FHE-refs.html](https://people.csail.mit.edu/vinodv/FHE/FHE-refs.html)
+- [https://v2ex.com/t/700927](https://v2ex.com/t/700927)
 
 #### Standardization
 
