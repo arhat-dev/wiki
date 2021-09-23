@@ -2,7 +2,7 @@
 title: Encryption
 description: 
 published: true
-date: 2021-09-23T10:37:42.201Z
+date: 2021-09-23T10:38:43.002Z
 tags: security, crypto, encryption
 editor: markdown
 dateCreated: 2021-09-23T10:17:13.830Z
@@ -29,5 +29,6 @@ Refs:
 
 C/C++
 
+- https://github.com/homenc/HElib
 - https://github.com/tfhe/tfhe
 - https://github.com/vernamlab/cuFHE
