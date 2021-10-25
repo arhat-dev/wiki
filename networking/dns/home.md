@@ -2,7 +2,7 @@
 title: DNS
 description: Domain Name System
 published: true
-date: 2021-10-25T17:18:16.956Z
+date: 2021-10-25T18:04:16.498Z
 tags: dns
 editor: markdown
 dateCreated: 2021-08-13T19:49:20.723Z
@@ -12,6 +12,11 @@ dateCreated: 2021-08-13T19:49:20.723Z
 
 Refs:
 - [https://github.com/SoylentBob/awesome-dns](https://github.com/SoylentBob/awesome-dns)
+
+### Passive DNS (pDNS)
+
+Refs:
+- [https://docs.farsightsecurity.com/#dnsdb](https://docs.farsightsecurity.com/#dnsdb)
 
 ### Global Organizations
 
